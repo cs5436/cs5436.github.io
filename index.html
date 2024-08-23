@@ -1,0 +1,1381 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <script src="assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>CS 5436 / INFO 5303 · Privacy in the Digital Age</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check2" viewBox="0 0 16 16">
+            <path
+                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        </symbol>
+        <symbol id="circle-half" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        </symbol>
+        <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+            <path
+                d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+            <path
+                d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        </symbol>
+        <symbol id="sun-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+        <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+            aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+            <svg class="bi my-1 theme-icon-active" width="1em" height="1em">
+                <use href="#circle-half"></use>
+            </svg>
+            <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#sun-fill"></use>
+                    </svg>
+                    Light
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark"
+                    aria-pressed="false">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#moon-stars-fill"></use>
+                    </svg>
+                    Dark
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+            <li>
+                <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto"
+                    aria-pressed="true">
+                    <svg class="bi me-2 opacity-50" width="1em" height="1em">
+                        <use href="#circle-half"></use>
+                    </svg>
+                    Auto
+                    <svg class="bi ms-auto d-none" width="1em" height="1em">
+                        <use href="#check2"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="arrow-right-circle" viewBox="0 0 16 16">
+            <path
+                d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+        </symbol>
+        <symbol id="bootstrap" viewBox="0 0 118 94">
+            <title>Bootstrap</title>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
+            </path>
+        </symbol>
+        <symbol id="cornell_logo" viewBox="0 0 262.7 262.7">
+            <g>
+                <g>
+                    <g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0"
+                                        d="M20.2,132.3c5.5,0,8.8-3.5,9.2-9.7c0-1.1,0-2.6-0.2-4.2V118h-4.6l0.4,0.9c0.2,0.7,0.4,2.2,0.4,3.5
+                                        c-0.2,3.1-2.6,5.1-5.9,4.8c-3.5-0.2-5.5-2.4-5.5-5.5c0-1.1,0.2-2.2,1.1-3.3l0.7-0.9l-4.4-0.7l-0.2,0.4
+                                        c-0.7,1.3-0.9,2.9-1.1,4.2c-0.4,6.4,3.1,10.6,9.5,10.8C19.7,132.3,19.9,132.3,20.2,132.3z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M21,110.8c1.3,0.4,2.4,0.4,3.5,0.4c4.2,0,7.3-2.4,8.6-6.6c0.7-2.6,0.4-4.8-0.7-7
+                                        c-1.3-2.2-3.5-3.7-6.4-4.6c-1.1-0.4-2.4-0.4-3.3-0.4c-4.2,0-7.3,2.4-8.6,6.6C12.5,104.6,15.1,109,21,110.8z M18,100.4
+                                        c0.7-2.4,2.6-2.9,4.2-2.9c0.7,0,1.5,0.2,2.4,0.4c2,0.7,3.5,1.5,4.2,2.9c0.4,0.9,0.7,1.8,0.2,2.9c-0.7,2.4-2.6,2.9-4.2,2.9
+                                        c-0.9,0-1.5-0.2-2.4-0.4C19.7,105.3,17.1,103.3,18,100.4z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0"
+                                        d="M40,86.1l-6.4-3.5l0.2-0.4c0.7-1.1,1.1-1.1,2-0.9l6.4,0.9l2.4-4.6l-8.4-0.9c-0.7,0-1.1,0-1.5,0
+                                        c0-1.8-0.9-3.5-2.6-4.4c-0.9-0.4-1.8-0.7-2.6-0.7c-3.1,0-4.6,3.1-6.2,5.9L21,81.7l16.7,9L40,86.1z M30.1,80.2l-0.2,0.4
+                                        l-3.1-1.5l0.2-0.4c0.7-1.3,1.5-2.6,2.9-2c0.4,0.2,0.7,0.4,0.9,0.9C30.9,78.4,30.5,79.5,30.1,80.2z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0" points="50.3,69.4 41.7,62.4 54,65.2 57.3,61 42.8,48.9 39.7,52.5 48.5,59.7 36.2,56.9 32.7,61 
+                                        47.4,73.1 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0" points="71.6,48.9 69,45.9 63.7,50 61.3,47.2 66.1,43.2 63.5,40.1 58.7,44.1 56.9,41.7 62.2,37.5 
+                                        59.5,34.2 50.5,41.5 62.4,56.2 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0"
+                                        points="87.3,39.5 85.3,36 79.3,39.3 72.1,26.3 67.9,28.7 77.1,45.2 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0"
+                                        points="103.3,33.3 101.8,29.6 95.6,31.8 90.6,17.9 85.9,19.5 92.3,37.3 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M122.5,30.2c0.4,0,0.7,0,1.1,0c2.6-0.2,4.6-1.1,5.7-2.4s1.5-3.3,1.3-5.5l-0.9-11.9l-4.8,0.2l0.9,10.8
+                                        c0.2,3.7-1.3,4.4-2.6,4.6c-0.2,0-0.2,0-0.4,0c-1.1,0-2.6-0.4-3.1-4.2L118.8,11l-4.8,0.4l0.9,11.9
+                                        C115.6,27.8,118.1,30.2,122.5,30.2z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0" points="144.2,19 148.2,30.7 153.7,31.6 156.1,12.6 151.5,12 150,23.2 146,11.3 140.7,10.7 138.1,29.4 
+                                        142.7,30 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0" points="170.4,16.8 165.8,15.3 160.1,33.3 164.7,34.9 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0"
+                                        points="194.2,27.4 190,25.2 180.8,34.6 182.7,21.7 178.1,19.2 175.3,39.3 180.1,41.5 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0" points="199,54.7 201.4,51.4 196.2,47.2 198.4,44.3 203.2,48.1 205.8,44.8 201,41 202.8,38.6 208,42.8 
+                                        210.7,39.5 201.4,32.4 189.8,47.4 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0"
+                                        d="M206.9,62.6l5.5-4.8l0.2,0.4c0.7,0.9,0.7,1.1,0.2,2.2l-3.1,5.7l3.5,4l3.7-7.5c0.2-0.2,0.4-0.9,0.4-1.5
+                                        c1.5,0.7,3.5,0.4,5.1-0.9c4.2-3.5,0.9-7.3-1.5-10.1l-3.1-3.5l-14.3,12.5L206.9,62.6z M218.2,52.7l0.2,0.4
+                                        c0.7,0.9,1.3,1.8,1.3,2.4c0,0.4-0.2,0.7-0.7,0.9c-0.2,0.4-0.7,0.4-0.9,0.4c-0.9,0-1.8-0.9-2.2-1.5l-0.2-0.4L218.2,52.7z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0"
+                                        d="M224.5,77.8c-0.9,0.7-2.2-0.4-2.6-1.3c-0.7-1.1-0.9-2.2-0.9-3.7v-1.1l-4.4,2l0.2,0.9
+                                        c0.4,1.5,0.7,2.4,1.5,4c1.5,2.6,3.5,4,5.7,4c1.1,0,2-0.2,3.1-0.9c3.3-2,2.9-5.1,2.4-7.5c-0.2-1.5-0.4-2.6,0.2-3.1
+                                        c0.4-0.2,0.7-0.2,0.9-0.2c0.9,0,1.5,0.9,1.8,1.1c0.7,0.9,0.9,2,1.1,3.1l0.2,0.9l4-1.8v-0.4c-0.2-1.3-0.9-2.6-1.8-4.2
+                                        c-2-3.5-5.5-4.6-8.6-2.6c-3.3,2-2.9,5.1-2.4,7.3C225.2,76.2,225.4,77.3,224.5,77.8z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+
+                                    <rect x="225.2" y="86.8"
+                                        transform="matrix(0.9259 -0.3777 0.3777 0.9259 -16.3094 95.2348)" class="st0"
+                                        width="18.9" height="4.8" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0" points="244.3,101.3 230,104.8 231.1,109.4 245.7,105.9 246.8,110.8 250.7,109.9 247.2,95.4 243.2,96.5 
+                                                                " />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0" points="233.1,123.3 233.3,128.2 240.8,127.7 252.7,133.9 252.4,128.6 245.4,125.3 252,121.1 
+                                        251.6,115.4 240.6,123.1 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0" points="23.9,167.7 27.9,166.6 26.3,160.9 29.2,160 30.9,166.2 34.9,164.9 31.8,154.3 13.6,159.6 
+                                        14.9,164.2 22.4,162 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M40.8,183.6c0.7-2.2,0.4-4.6-0.7-7c-1.8-3.5-4.4-5.3-7.9-5.3c-1.5,0-3.3,0.4-5.1,1.3
+                                        c-2.9,1.3-4.6,3.3-5.5,5.7c-0.7,2.2-0.4,4.6,0.7,7c1.8,3.3,4.4,5.3,7.9,5.3c1.5,0,3.3-0.4,5.1-1.3
+                                        C38.2,187.8,40.2,186,40.8,183.6z M33.4,184.7c-1.1,0.7-2.4,0.9-3.5,0.9c-1.8,0-2.9-0.7-3.5-2.2c-0.4-1.1-0.7-2-0.2-2.9
+                                        c0.4-1.3,1.8-2.6,3.5-3.5c1.1-0.4,2.2-0.9,3.3-0.9c1.8,0,2.9,0.7,3.5,2.2c0.4,1.1,0.7,2,0.2,2.9
+                                        C36.2,182.5,35.1,183.8,33.4,184.7z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0"
+                                        d="M54,198.3l-8.6,6.8c-2.2,1.8-4,2-5.3,0.4c-0.4-0.7-0.7-1.3-0.7-2c0.2-0.9,0.9-2,2.2-3.1l8.6-6.8l-3.1-3.7
+                                        l-9.5,7.5c-2,1.5-3.1,3.3-3.1,5.3c0,1.8,0.7,3.5,2.2,5.5c1.8,2.4,3.7,3.5,5.9,3.5c1.5,0,3.1-0.7,4.6-2l9.5-7.7L54,198.3z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0" points="70.1,213.7 63.1,222.5 65.7,210.2 61.5,206.7 49.4,221.4 53.2,224.5 60.2,215.7 57.6,228 
+                                        61.7,231.5 73.8,216.8 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M84.2,222.7l-4.8-2.4l-8.6,16.9l4.8,2.4c2.4,1.1,4.4,1.8,6.4,1.8c3.3,0,5.9-1.8,7.7-5.3
+                                        C92.5,230.4,90.6,226,84.2,222.7z M85.1,234c-0.9,2-2.6,3.1-4.6,3.1c-0.9,0-1.5-0.2-2.4-0.7l-1.1-0.7l4.8-9.7l1.1,0.7
+                                        c1.3,0.7,2.2,1.8,2.6,2.9C85.9,231.1,85.7,232.4,85.1,234z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0" points="94.7,247.8 106,250.9 107.1,246.9 100.5,245.2 101.3,241.7 107.5,243.2 108.6,239.2 102.4,237.7 
+                                        103.1,234.6 109.9,236.4 110.8,232.4 99.6,229.6 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M122.7,234l-5.5-0.2l-1.1,18.9l5.5,0.2c0.4,0,0.9,0,1.3,0c6.4,0,9.7-3.1,10.1-9c0.2-2.9-0.4-5.3-2-7
+                                        C129.3,235.3,126.6,234.2,122.7,234z M122.5,248.9h-1.3l0.7-10.8h1.3c2.6,0.2,5.1,2.2,4.8,5.7
+                                        C127.7,247.4,125.1,248.9,122.5,248.9z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M149.7,232.4l-3.3,20l5.1-1.1l0.7-4.2l6.2-1.3l2.4,3.7l5.3-1.1l-11.2-16.9L149.7,232.4z M152.8,243
+                                        l0.7-5.1l2.6,4.2L152.8,243z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0"
+                                        points="167.8,242.3 169.5,246.9 173.9,245.2 172.4,240.8 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0"
+                                        d="M177,223.2l-4.8,2.6l9,16.7l4.8-2.6c6.4-3.5,7.9-7.9,5.1-13.4C188.2,220.8,183.4,219.7,177,223.2z
+                                         M184.7,235.9l-1.1,0.7l-5.1-9.5l1.1-0.7c0.7-0.4,1.5-0.7,2.4-0.7c2,0,3.5,1.1,4.6,2.9C188.5,231.8,186.9,234.6,184.7,235.9z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0"
+                                        points="194.8,229.1 197.5,233.1 201.4,230.2 198.8,226.3 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <polygon class="st0"
+                                        points="202.3,204.7 201.4,212.2 205.6,212.8 206.1,209.8 215.1,218.8 218.6,215.5 205.2,201.8 						" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M228.1,194.8c-1.5-1.1-3.3-1.3-5.3-0.7c0-1.8-0.9-3.5-2.2-4.4c-2.4-1.8-5.5-0.7-7.9,2.4
+                                        c-2.2,3.1-2,6.2,0.7,8.1c1.3,0.9,3.1,1.1,4.6,0.7c-0.2,2,0.4,3.5,2,4.6c1.1,0.9,2.2,1.1,3.3,1.1c2,0,3.7-1.1,5.5-3.3
+                                        c1.3-1.8,2-3.5,1.8-5.3C230.3,197,229.4,195.9,228.1,194.8z M219,196.1c-0.7,0.4-1.3,0.9-2,0.9c-0.2,0-0.7,0-0.9-0.2
+                                        c-0.9-0.7-0.4-1.8,0-2.4c0.2-0.4,0.7-0.7,1.1-0.7c0.2,0,0.7,0.2,1.1,0.4C219,194.6,219.3,195.5,219,196.1z M225.6,201.4
+                                        c-0.7,0.9-1.8,1.1-2.6,0.4c-0.7-0.7-1.1-1.3-0.9-2.6c1.3-0.9,2.4-1.1,3.3-0.4c0.4,0.2,0.7,0.7,0.7,1.1S225.9,201,225.6,201.4z
+                                        " />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0" d="M236.6,176.3c-3.3-1.5-6.4-0.7-7.9,2.4c-0.4,0.9-0.7,1.8-0.4,2.6c-1.1-0.9-2.2-2.4-1.3-4.4
+                                        c0.4-0.9,1.1-1.5,1.8-2.2l0.7-0.4l-3.5-2.4l-0.4,0.4c-0.9,0.9-1.8,2-2.4,3.3c-0.9,2-1.1,3.7-0.4,5.5c1.1,3.1,4.2,5.3,6.6,6.4
+                                        c2.2,1.1,4,1.5,5.5,1.5c2.4,0,4.2-1.1,5.5-3.5C241.9,181.6,240.6,178.3,236.6,176.3z M236.6,183.4c-0.2,0.7-0.9,0.9-1.5,0.9
+                                        c-0.4,0-1.1-0.2-1.5-0.4c-0.9-0.4-1.5-1.1-1.8-1.5c-0.2-0.4,0-0.7,0-1.1c0.2-0.7,0.7-0.9,1.5-0.9c0.4,0,1.1,0.2,1.8,0.4
+                                        c0.9,0.4,1.3,0.9,1.5,1.5C236.9,182.7,236.6,183.1,236.6,183.4z" />
+                                </g>
+                            </g>
+                        </g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path class="st0"
+                                        d="M243.5,157c-3.7-1.1-6.8,0.7-7.9,4.2c0,0.4-0.2,0.7-0.2,0.9l-2.2-0.7l2-6.6l-3.7-1.1l-3.3,11l10.6,3.3
+                                        v-0.9c0-1.1,0.2-2,0.4-3.1c0.2-0.9,1.3-3.1,3.3-2.6c2.2,0.7,1.8,3.1,1.5,3.7c-0.4,1.3-1.1,2.2-1.8,3.1l-0.7,0.7l4.4,1.5
+                                        l0.2-0.4c0.7-1.3,1.3-2.9,1.8-4c0.7-2.2,0.7-4.2-0.2-5.9C246.8,158.7,245.2,157.6,243.5,157z" />
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <path class="st0"
+                                    d="M104.3,111l-0.9-0.5C98,107.6,89,102.3,89,98.3V77.4h31.2v21.1c0,3.5-8.2,8.5-15,12L104.3,111z M92.8,90.9
+                                    v7.4c0.4,1.3,5.6,5.1,11.5,8.3c6.1-3.2,11.4-6.9,12.1-8.3v-7.4H92.8z M92.8,87.1h23.6v-5.9H92.8V87.1z" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <path class="st0"
+                                    d="M131.3,262.6C58.9,262.6,0,203.7,0,131.3S58.9,0,131.3,0s131.3,58.9,131.3,131.3S203.7,262.6,131.3,262.6z
+                                     M131.3,3.8C61,3.8,3.8,61,3.8,131.3S61,258.8,131.3,258.8s127.5-57.2,127.5-127.5S201.6,3.8,131.3,3.8z" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <path class="st0" d="M131.3,227.2c-52.9,0-95.9-43-95.9-95.9s43-95.9,95.9-95.9s95.9,43,95.9,95.9
+                                    C227.2,184.2,184.2,227.2,131.3,227.2z M131.3,39.2c-50.8,0-92.1,41.3-92.1,92.1s41.3,92.1,92.1,92.1s92.1-41.3,92.1-92.1
+                                    S182.1,39.2,131.3,39.2z" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <path class="st1" d="M131.3,85.2" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <path class="st0" d="M158.1,111l-0.9-0.5c-5.5-2.9-14.7-8.2-14.7-12.2V77.4h31.2v21.1c0,2.8-5,6.8-14.7,12L158.1,111z
+                                     M146.3,98.2c0.5,1.4,5.8,5.2,11.8,8.4c5.9-3.2,11.1-6.9,11.8-8.3v-2.6L158.1,88l-11.8,7.7V98.2z M169.9,98.3L169.9,98.3
+                                    L169.9,98.3z M158.1,83.4l11.8,7.7v-9.9h-23.5v9.9L158.1,83.4z" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+
+                                <rect x="111.3" y="141.9"
+                                    transform="matrix(0.999 -4.550182e-02 4.550182e-02 0.999 -6.4349 5.5141)"
+                                    class="st0" width="13.2" height="4.4" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+
+                                <rect x="111.3" y="154"
+                                    transform="matrix(0.999 -4.528212e-02 4.528212e-02 0.999 -6.9523 5.4991)"
+                                    class="st0" width="13.2" height="4.4" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+
+                                <rect x="111.3" y="166.1"
+                                    transform="matrix(0.999 -4.528212e-02 4.528212e-02 0.999 -7.5002 5.5115)"
+                                    class="st0" width="13.2" height="4.4" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <rect x="96.3" y="144.2" class="st0" width="7.3" height="6.1" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <rect x="96.3" y="161.6" class="st0" width="7" height="6.1" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <path class="st0"
+                                    d="M129.5,180.7c-0.1-0.1-2.6-1.9-4.2-1.7c-7.9,1.3-20.7,1-21.3,1h-1.9v-47.4l2.1,0.2
+                                    c0.1,0,10.1,1.1,19.1-0.5c3.1-0.8,6.3,0,7.9,0.6c1.6-0.5,5.1-1.4,8.3-0.6c9,1.6,19,0.5,19.1,0.5l2.1-0.2V180h-1.9
+                                    c-0.6,0-13.7,0.3-21.6-1c-1.7-0.3-3.8,1.3-4.4,1.7l-1.6,1.1L129.5,180.7z M126.1,175.1c2.2-0.1,3.8,1,5,1.8
+                                    c1.4-0.9,4.2-2.2,6.9-1.7c5.8,1,15,1,19,1v-39.4c-3.6,0.3-11,0.6-18.1-0.7h-0.2c-2.9-0.8-6.6,0.5-6.6,0.5l-0.9,0.2H131
+                                    c0,0-3.6-1.5-6.5-0.7h-0.2c-7.1,1.3-14.5,1-18.1,0.7v39.4c3.9,0,13.1,0,19-1C125.7,175.1,125.7,175.1,126.1,175.1z" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+
+                                <rect x="142.8" y="149.6"
+                                    transform="matrix(4.537537e-02 -0.999 0.999 4.537537e-02 -17.6213 294.0034)"
+                                    class="st0" width="4.4" height="13.2" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+
+                                <rect x="142.8" y="161.7"
+                                    transform="matrix(4.537537e-02 -0.999 0.999 4.537537e-02 -29.7122 305.5572)"
+                                    class="st0" width="4.4" height="13.2" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <rect x="159.4" y="144.2" class="st0" width="7" height="6.1" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+                                <rect x="159.4" y="161.6" class="st0" width="7" height="6.1" />
+                            </g>
+                        </g>
+                    </g>
+                    <g>
+                        <g>
+                            <g>
+
+                                <rect x="142.8" y="137.7"
+                                    transform="matrix(3.784857e-02 -0.9993 0.9993 3.784857e-02 -4.6885 283.7716)"
+                                    class="st0" width="4.4" height="13.2" />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <g>
+                            <path class="st0" d="M131.1,218.8l-0.8-0.3c-0.6-0.3-14.9-6.7-29.5-18c-19.6-15.2-30.2-31.8-30.5-48.2c0.7-35,0.1-81.6,0.1-82.1
+                                v-1.9h122v1.9c0,0.5-0.1,47.7-0.1,82.1c0,16.4-10.5,33-30.4,48.2c-14.8,11.3-29.4,17.8-30,18L131.1,218.8z M133,119.7v93.9
+                                c11.4-5.6,55.3-29.3,55.3-61.5c0-10.2,0-21.6,0-32.5L133,119.7L133,119.7z M74.5,119.7c0,10.9-0.1,22.2-0.3,32.5
+                                c0.4,19,16,35.1,29,45.1c10.6,8.2,21.2,13.9,26,16.3v-93.9C129.2,119.7,74.5,119.7,74.5,119.7z M74.5,115.9h113.9
+                                c0-20.1,0.1-38.1,0.1-43.9H74.2C74.3,77.8,74.5,95.7,74.5,115.9z" />
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </symbol>
+        <symbol id="slides" class="bi bi-file-slides-fill" viewBox="0 0 16 16">
+            <path
+                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+            <path
+                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+        </symbol>
+    </svg>
+
+
+
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
+        <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+            <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="40">
+                    <use xlink:href="#cornell_logo" />
+                </svg>
+                <span class="fs-4"><b>CS 5436 / INFO 5303:</b> Privacy in the Digital Age</span>
+            </a>
+        </header>
+
+        <main>
+            <div class="row g-5">
+                <h2 class="text-body-emphasis">Course Information</h2>
+                <div class="col-md-7 mt-2">
+                    <h5 class="text-body-secondary">Overview</h5>
+                    <p>This course surveys the current state of digital privacy from multiple perspectives, including
+                        technology, philosophy, ethics, law, and policy. Privacy poses equally difficult challenges to
+                        technologists, policy makers, and ethicists. They must understand what privacy means in their
+                        respective domains, as well as the mutual impacts of the domains on one another. The course will
+                        review key technologies, including web and mobile tracking, location tracking, privacy
+                        engineering, data analytics and differential privacy, facial recognition, and more. It will also
+                        introduce students to different approaches to privacy, including technical, empirical, legal,
+                        and ethical. When addressing privacy threats in these areas, as well as potential solutions, the
+                        course sets out to pair a review of relevant technologies with a review of associated
+                        considerations in law and policy, ethics, and social sciences.</p>
+                    <h5 class="text-body-secondary">Grading Policy</h5>
+                    <p>
+                        Grading is based on homeworks (72%), a take-home final exam (18%) and in-class attendance and
+                        participation (10%).
+                    </p>
+
+                </div>
+
+                <div class="col-md-5 mt-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-body-secondary"></h6>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Logistics</h6>
+                            <ul class="list-unstyled ps-0">
+                                <li>
+                                    <b>Time:</b> Tu / Th, 10:10 - 11:25am
+                                </li>
+                                <li>
+                                    <b>Location:</b> Bloomberg 161X
+                                </li>
+                            </ul>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Staff</h6>
+                            <ul class="list-unstyled ps-0">
+                                <li>
+                                    <a class="icon-link text-reset" href="https://nissenbaum.tech.cornell.edu/">
+                                        <b>Helen Nissenbaum:</b>
+                                    </a>
+                                    hn288 at cornell.edu
+                                </li>
+                                <li>
+                                    <a class="icon-link text-reset" href="http://www.cs.cornell.edu/~shmat">
+                                        <b>Vitaly Shmatikov:</b>
+                                    </a>
+                                    shmat at cs.cornell.edu
+                                </li>
+                                <li>
+                                    <a class="icon-link text-reset" href="#">
+                                        (TA) Hauke Sandhaus:
+                                    </a>
+                                    hgs52 at cornell.edu
+                                </li>
+                                <li>
+                                    <a class="icon-link text-reset" href="https://rishijha.com/">
+                                        (TA) Rishi Jha:
+                                    </a>
+                                    rjha at cs.cornell.edu
+                                </li>
+                            </ul>
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Office Hours</h6>
+                            <ul class="list-unstyled ps-0">
+                                <li>
+                                    <b>M, 11-12pm</b> [Zoom] (Hauke)
+                                </li>
+                                <li>
+                                    <b>Th, 3-4pm</b> [Bloomberg 338 | Zoom] (Rishi)
+                                </li>
+                            </ul>
+
+                            <h6 class="card-subtitle mb-2 text-body-secondary">Textbook</h6>
+                            <a class='card-link'
+                                href="https://www.amazon.com/Privacy-Context-Technology-Integrity-Stanford/dp/0804752370/">Nissenbaum.
+                                "Privacy in Context".</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="col-3 col-md-2 mb-5">
+
+            <div class="row g-5">
+                <h2 class="text-body-emphasis">Assignments</h2>
+                <div class="col-md-12 mt-2">
+                    <div class="card-group">
+                        <div class="card">
+                            <div class="card-body align-items-center">
+                                <h5 class="card-title">Assignment #1</h5>
+                                <!-- <p class="card-text">Due: TBD</p> -->
+                                <a href="#" class="btn btn-primary stretched-link disabled">TBA</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body align-items-center">
+                                <h5 class="card-title">Assignment #2</h5>
+                                <!-- <p class="card-text">Due: TBD</p> -->
+                                <a href="#" class="btn btn-primary stretched-link disabled">TBA</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body align-items-center">
+                                <h5 class="card-title">Assignment #3</h5>
+                                <!-- <p class="card-text">Due: TBD</p> -->
+                                <a href="#" class="btn btn-primary stretched-link disabled">TBA</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body align-items-center">
+                                <h5 class="card-title">Assignment #4</h5>
+                                <!-- <p class="card-text">Due: TBD</p> -->
+                                <a href="#" class="btn btn-primary stretched-link disabled">TBA</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body align-items-center">
+                                <h5 class="card-title">Final Exam</h5>
+                                <!-- <p class="card-text">Due: TBD</p> -->
+                                <a href="#" class="btn btn-primary stretched-link disabled">TBA</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <h2 class="text-body-emphasis">Assignments</h2>
+                    <ul class="list-unstyled ps-0">
+                        <li>
+                            <a class="icon-link mb-1 disabled" href="#">
+                                <svg class="bi" width="16" height="16">
+                                    <use xlink:href="#arrow-right-circle" />
+                                </svg>
+                                Assignment #1
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-link mb-1" href="#">
+                                <svg class="bi" width="16" height="16">
+                                    <use xlink:href="#arrow-right-circle" />
+                                </svg>
+                                Assignment #2
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-link mb-1" href="#">
+                                <svg class="bi" width="16" height="16">
+                                    <use xlink:href="#arrow-right-circle" />
+                                </svg>
+                                Assignment #3
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-link mb-1" href="#">
+                                <svg class="bi" width="16" height="16">
+                                    <use xlink:href="#arrow-right-circle" />
+                                </svg>
+                                Assignment #4
+                            </a>
+                        </li>
+                        <li>
+                            <a class="icon-link mb-1" href="#">
+                                <svg class="bi" width="16" height="16">
+                                    <use xlink:href="#arrow-right-circle" />
+                                </svg>
+                                Final Exam
+                            </a>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+
+            <hr class="col-3 col-md-2 mb-5">
+
+            <div class="row g-5">
+                <h2 class="text-body-emphasis">Schedule</h1>
+                    <div class="col-md-12 mt-2">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Lecture</th>
+                                    <th scope="col">Reading</th>
+                                    <th scope="col">Slides</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-group-divider">
+                                <tr>
+                                    <th scope="row">1/24</th>
+                                    <td>Course overview.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://www.eff.org/wp/behind-the-one-way-mirror">Cyphers and
+                                                    Gebhart. "Behind
+                                                    the One-Way Mirror: A Deep Dive Into the Technology of Corporate
+                                                    Surveillance"</a>.
+                                            <li> <b>Optional:</b> <a
+                                                    href="https://crackedlabs.org/en/corporate-surveillance">Christl.
+                                                    "Corporate
+                                                    Surveillance in Everyday Life"</a>.
+                                                <!--
+                                <li> <b>Read:</b> <a href="whattheyknow.pdf">What They Know: The Business of Tracking You on the Internet</a> (WSJ).
+                                -->
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/intro.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">1/26</th>
+                                    <td>Web tracking and online advertising.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://jonathanmayer.org/publications/trackingsurvey12.pdf">Mayer
+                                                    and Mitchell.
+                                                    "Third-Party Web Tracking: Policy and Technology"</a>.
+                                            <li> <b>Read:</b> <a
+                                                    href="http://randomwalker.info/publications/webtap-chapter.pdf">Narayanan
+                                                    and Reisman.
+                                                    "The Princeton Web Transparency and Accountability Project"</a>.
+                                            <li> <b>Optional:</b> <a
+                                                    href="https://webtransparency.cs.princeton.edu/no_boundaries/assets/no-boundaries-pets2020.pdf">Acar
+                                                    et al. "No Boundaries: Data Exfiltration by Third Parties Embedded
+                                                    on Web Pages"</a>.
+                                            <li> <b>Optional:</b> <a
+                                                    href="https://www.ccs.neu.edu/home/ahmad/publications/bashir-pets18.pdf">Bashir
+                                                    and Wilson. "Diffusion of User Tracking Data in the Online
+                                                    Advertising Ecosystem"</a>.
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/web.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">1/31</th>
+                                    <td>Cross-device tracking.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://petsymposium.org/2017/papers/issue2/paper29-2017-2-source.pdf">Brookman
+                                                    et al. "Cross-Device Tracking: Measurement and Disclosures"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">2/2</th>
+                                    <td>Ethical and philosophical approaches to privacy.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> PIC Chapters 4 and 5.
+                                            <li> <b>Optional:</b> <a href="gavison.pdf">Gavison. "Privacy and the Limits
+                                                    of
+                                                    Law"</a>.
+                                            <li> <b>Optional:</b> <a href="solove.pdf">Solove. "The Meaning and Value of
+                                                    Privacy"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">2/7</th>
+                                    <td>Privacy harms and privacy puzzles.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> PIC Chapter 6.
+                                            <li> <b>Read:</b> <a href="citron.pdf">Citron and Solove. "Privacy
+                                                    Harms"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">2/9</th>
+                                    <td>Contextual integrity (part 1).</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> PIC Chapter 7.
+                                            <li> <b>Read:</b> <a href="malkin.pdf">Malkin. "Contextual Integrity,
+                                                    Explained".</a>
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">2/14</th>
+                                    <td>Mobile tracking and fingerprinting.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://fil.forbrukerradet.no/wp-content/uploads/2020/01/2020-01-14-out-of-control-final-version.pdf">Forbrukerrådet.
+                                                    "Out of Control: How Consumers Are Exploited by the Online
+                                                    Advertising Industry"</a>.
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/mobile.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">2/16</th>
+                                    <td>Location tracking.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a href="martin-nissenbaum.pdf">Martin and Nissenbaum.
+                                                    "What Is
+                                                    It About Location?"</a>.
+                                                <!--
+                                <li> <b>Optional:</b> <a href="https://www.nature.com/articles/srep01376">de Montjoye et al. "Unique in the Crowd: The Privacy Bounds of Human Mobility"</a>.
+                                <li> <b>Optional:</b> <a href="https://www.eff.org/files/eff-locational-privacy.pdf">Blumberg and Eckersley. "On Locational Privacy, and How to Avoid Losing it Forever"</a>.
+                                -->
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/location.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">2/21</th>
+                                    <td>Privacy policies.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a href="hew-report.pdf">"Records, Computers and the
+                                                    Rights of
+                                                    Citizens," U.S. Department
+                                                    of Health, Education & Welfare report: Summary and
+                                                    Recommendations</a>.
+                                            <li> <b>Read:</b> <a href="reidenberg.pdf">Reidenberg et al. "Ambiguity in
+                                                    Privacy
+                                                    Policies and the Impact
+                                                    of Regulation"</a>.
+                                            <li> <b>Optional:</b> <a href="shvartzshnaider.pdf">Shvartzshnaider et. al.
+                                                    “Going
+                                                    Against the
+                                                    (Appropriate) Flow: A Contextual Integrity Approach to Privacy
+                                                    Policy Analysis”</a>.
+                                                <!--
+                                <li> <b>Read:</b> <a href="cranor.pdf">Cranor et al. "Are They Worth Read? An In-Depth Analysis of Online Trackers' Privacy Policies"</a>.
+                                <li> <b>Read:</b> <a href="gdpr.pdf">GDPR summary</a>.
+                                <li> <b>Read:</b> <a href="whitehouse-report.pdf">"Consumer Data Privacy in a Networked World," White House report</a> - Executive Summary and Appendices A and B.
+                                -->
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">2/23</th>
+                                    <td>Contextual integrity (part 2).</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> PIC Chapter 8.
+                                            <li> <b>Read:</b> <a href="regan.pdf">Regan. "Privacy as a Common Good in
+                                                    the
+                                                    Digital World"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3/2</th>
+                                    <td>End-2-end secure communications and "going dark".</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://regmedia.co.uk/2021/10/14/key_risks_paper.pdf">Abelson
+                                                    et al. "Bugs in
+                                                    our Pockets: The Risks of Client-Side Scanning"</a>.
+                                                <!--
+                                <li> <b>Read:</b> <a href="https://eprint.iacr.org/2016/1013.pdf">Cohn-Gordon et al. "A Formal Security Analysis of the Signal Messaging Protocol"</a> (sections 1-3 only).
+                                <li> <b>Read:</b> <a href="https://dspace.mit.edu/bitstream/handle/1721.1/97690/MIT-CSAIL-TR-2015-026.pdf">Abelson et al. "Keys Under Doormats"</a>.
+                                -->
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/end2end.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3/7</th>
+                                    <td><a href="https://www.asc.upenn.edu/people/faculty/joseph-turow-phd">Joseph
+                                            Turow</a>: What can we learn from large-scale privacy surveys?</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a href="voicecatchers1.pdf">Turow. "The Voice Catchers:
+                                                    How
+                                                    Marketers Listen In to
+                                                    Exploit Your Feelings, Your Privacy, and Your Wallet"</a>, Chapter
+                                                1.
+                                            <li> <b>Optional:</b> <a href="draper-turow.pdf">Draper and Turow. "The
+                                                    Corporate
+                                                    Cultivation of Digital
+                                                    Resignation"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3/9</th>
+                                    <td>Anonymity networks and censorship resistance.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://svn-archive.torproject.org/svn/projects/design-paper/tor-design.pdf">Dingledine
+                                                    et al. "Tor: The Second-Generation Onion Router"</a>.
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/onion.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3/14</th>
+                                    <td>U.S. legal landscape.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a href="solove-schwartz.pdf">Solove and Schwartz.
+                                                    "Privacy Law
+                                                    Fundamentals"</a>.
+                                            <li> <b>Optional:</b> <a href="warren-brandeis.pdf">Warren and Brandeis.
+                                                    "The Right
+                                                    to Privacy"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3/16</th>
+                                    <td>U.S. legal landscape (cont'd).</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://www.law.cornell.edu/constitution/fourth_amendment">U.S.
+                                                    Constitution,
+                                                    Fourth Amendment</a>.
+                                            <li> <b>Read:</b> <a
+                                                    href="https://www.brennancenter.org/media/7399/download">Hecht-Felella.
+                                                    "The Fourth
+                                                    Amendment in the Digital Age"</a>, pages 1-11.
+                                            <li> <b>Read:</b> <a href="applying-carpenter.pdf">"Applying the Supreme
+                                                    Court's
+                                                    Carpenter Decision to New
+                                                    Technologies", Brennan Center for Justice</a>.
+                                                <!--
+                                <li> <b>Read:</b> <a href="https://www.brennancenter.org/our-work/analysis-opinion/how-fbi-violated-privacy-rights-tens-thousands-americans">Goitein. "How the FBI Violated the Privacy Rights of Tens of Thousands of Americans"</a>.
+                                <li> <b>Read:</b> <a href="farivar.pdf">Chapter One</a> of Farivar. "Habeas Data: Privacy vs. the Rise of Surveillance Tech".  
+                                <li> <b>Read:</b> <a href="scotusblog.pdf">Howe. "Opinion Analysis: Court Holds That Police Will Generally Need a Warrant for Sustained Cellphone Location Information"</a>.
+                                <li> <b>Optional:</b> <a href="carpentervus.pdf">Carpenter vs. US</a>.
+                                <li> <b>Read:</b> <a href="https://epic.org/amicus/location/carpenter/">EPIC amicus brief</a> in <a href="uscarpenter.pdf">Carpenter v. United States</a>.
+                                <li> <b>Read:</b> <a href="grimmelmann.pdf">Grimmelmann. "Internet Law: Cases and Problems" (pp. 215-230)</a> (skip the "Note on Warrant Justification").
+                                <li> <b>Optional:</b> <a href="grimmelmann.pdf">Grimmelmann, pp. 231-242</a>.
+                                <li> <b>Optional:</b> <a href="smithmaryland.pdf">Smith v Maryland</a>.
+                                <li> <b>Optional:</b> <a href="strandburg.pdf">Strandburg. "Home, Home on the Web and Other Fourth Amendment Implications of Technosocial Change"</a>.
+                                <ul class="list-unstyled mb-0">
+                                <li> Note: This article was published in 2011, and U.S. v. Maynard
+                                referenced in it became U.S. v. Jones in the Supreme Court.
+                                </ul>
+                                </td>
+                                <td></td>
+                                </tr>
+                                <li> <b>Optional:</b> <a href="selbst.pdf">Selbst. "Contextual Expectations of Privacy"</a>.
+                                -->
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3/21</th>
+                                    <td><a href="https://elettra.bietti.me/">Elettra Bietti</a>: European Union General
+                                        Data Protection Regulation (GDPR).</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://pure.uva.nl/ws/files/34085945/European_Union_General_Data_Protection_Regulation.pdf">Hoofnagle
+                                                    et al. "The European Union General Data Protection Regulation: What
+                                                    It Is And What It
+                                                    Means"</a>.
+                                            <li> <b>Optional:</b> <a
+                                                    href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3036355">Purtova.
+                                                    "The
+                                                    Law of Everything. Broad Concept of Personal Data and Future of EU
+                                                    Data Protection Law"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3/23</th>
+                                    <td>Data anonymization and re-identification.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://www.cs.cornell.edu/~shmat/shmat_cacm10.pdf">Narayanan
+                                                    and Shmatikov.
+                                                    "Myths and Fallacies of 'Personally Identifiable Information' "</a>.
+                                            <li> <b>Read:</b> <a href="ohm.pdf">Ohm. "Broken Promises of Privacy:
+                                                    Responding to
+                                                    the Surprising Failure
+                                                    of Anonymization"</a>.
+                                            <li> <b>Optional:</b> <a
+                                                    href="https://www.cs.cornell.edu/~shmat/shmat_oak08netflix.pdf">Narayanan
+                                                    and
+                                                    Shmatikov. "Robust De-anonymization of Large Sparse Datasets"</a>.
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/anonymization.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3/28</th>
+                                    <td>Introduction to differential privacy.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://mit-serc.pubpub.org/pub/differential-privacy-2020-us-census/release/1">Garfinkel.
+                                                    "Differential Privacy and the 2020 US Census"</a>.
+                                            <li> <b>Optional:</b> <a
+                                                    href="https://fullstackeconomics.com/why-the-2020-census-has-9-fake-people-in-a-single-house/">Lee.
+                                                    "Why the 2020 Census Has 9 Fake People in a Single House"</a>.
+                                                <!--
+                                <li> <b>Optional:</b> <a href="https://knightcolumbia.org/content/democracys-data-infrastructure">Bouk and Boyd. "Democracy's Data Infrastructure"</a>.
+                                -->
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/dp.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">3/30</th>
+                                    <td>Data analytics with differential privacy.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://privacytools.seas.harvard.edu/files/privacytools/files/pedagogical-document-dp_new.pdf">Nissim
+                                                    et al. "Differential Privacy: A Primer for a Non-technical
+                                                    Audience"</a>.
+                                            <li> Read (optional for INFO): <a
+                                                    href="http://static.googleusercontent.com/media/research.google.com/en/us/pubs/archive/42852.pdf">Erlingsson
+                                                    et al. "RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal
+                                                    Response"</a>.
+                                                <!--
+                                <li> <b>Optional:</b> <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2010/09/pinq-CACM.pdf">McSherry. "Privacy Integrated Queries: An Extensible Platform for Privacy-Preserving Data Analysis"</a>.
+                                -->
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/dp.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">4/11</th>
+                                    <td>Face recognition. Privacy of biometrics.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Optional:</b> <a
+                                                    href="https://www.washingtonpost.com/technology/2021/04/02/capitol-siege-arrests-technology-fbi-privacy/">"How
+                                                    America's Surveillance Networks Helped the FBI Catch the Capitol
+                                                    Mob"</a> (WaPo).
+                                                <!--
+                                <li> <b>Read:</b> <a href="https://medium.com/s/story/facial-recognition-is-the-perfect-tool-for-oppression-bc2a08f0fe66">Hartzog and Selinger. "Facial Recognition Is the Perfect Tool for Oppression"</a>.
+                                -->
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/faces-biometrics.ppt
+                                        x"><svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">4/13</th>
+                                    <td>The threat of "big data".</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a href="barocas-nissenbaum.pdf">Barocas and Nissenbaum.
+                                                    "Big
+                                                    Data's End-run Around
+                                                    Anonymity and Consent"</a>.
+                                            <li> <b>Read:</b> <a href="duhigg.pdf">Duhigg. "How Companies Learn Your
+                                                    Secrets"</a>.
+                                            <li> <b>Optional:</b> <a href="shattuck-kusserow.pdf">Shattuck. "Computer
+                                                    Matching
+                                                    Is a Serious Threat to
+                                                    Individual Rights" vs. Kusserow. "The Government Needs Computer
+                                                    Matching to Root Out Waste
+                                                    and Fraud"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">4/18</th>
+                                    <td><a href="https://www.dli.tech.cornell.edu/members/Balsa">Ero Balsa</a>: Privacy
+                                        by design.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://software.imdea.org/~carmela.troncoso/papers/Gurses-CPDP11.pdf">G&uuml;rses
+                                                    et
+                                                    al. "Engineering Privacy by Design"</a>.
+                                            <li> <b>Read:</b> <a
+                                                    href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7448344">G&uuml;rses
+                                                    and del Alamo. "Privacy Engineering: Shaping an Emerging Field of
+                                                    Research and
+                                                    Practice"</a>.
+                                            <li> <b>Read:</b> <a
+                                                    href="https://www.esat.kuleuven.be/cosic/publications/article-2589.pdf">G&uuml;rses
+                                                    et
+                                                    al. "Engineering Privacy by Design Reloaded"</a>.
+                                            <li> <b>Optional:</b> <a
+                                                    href="https://www.cs.ru.nl/~jhh/publications/pdp.pdf">Hoepman.
+                                                    "Privacy Design
+                                                    Strategies"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">4/20</th>
+                                    <td><a href="https://www.usabart.nl/portfolio/#home.html">Bart Knijnenburg</a>:
+                                        Usable privacy.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a href="knijnenburg-death.pdf">Knijnenburg et al. "Death
+                                                    To The
+                                                    Privacy Calculus?"</a>
+                                            <li> <b>Optional:</b> <a href="feng.pdf">Feng et al. "A Design Space for
+                                                    Privacy
+                                                    Choices: Towards
+                                                    Meaningful Privacy Control in the Internet of Things"</a>.
+                                            <li> <b>Optional:</b> Knijnenburg et al. "User-Tailored Privacy" -- see <a
+                                                    href="knijnenburg-tailored.pdf">Chapter 16</a>.
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/knijnenburg.pdf">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">4/25</th>
+                                    <td>Genomic privacy.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://www.gwern.net/docs/genetics/2013-gymrek.pdf">Gymrek et
+                                                    al. "Identifying
+                                                    Personal Genomes by Surname Inference"</a>.
+                                            <li> Watch: <a
+                                                    href="https://www.youtube.com/watch?v=giiXWtBdVFc&t=780s">Nelson.
+                                                    "The Social Life of
+                                                    DNA and the Need for a New Bioethics"</a>.
+                                            <li> <b>Optional:</b> <a
+                                                    href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4151119/">Erlich
+                                                    and Narayanan.
+                                                    "Routes For Breaching and Protecting Genetic Privacy"</a>.
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/genomic.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">4/27</th>
+                                    <td><a href="https://www.cs.cornell.edu/~eugene/">Eugene Bagdasaryan</a>: Privacy
+                                        issues in machine learning.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://www.cs.cornell.edu/~shmat/shmat_oak17.pdf">Shokri et
+                                                    al. "Membership
+                                                    Inference Attacks Against Machine Learning Models"</a>.
+                                            <li> <b>Read:</b> <a href="https://arxiv.org/pdf/2012.07805.pdf">Carlini et
+                                                    al.
+                                                    "Extracting Training Data
+                                                    from Large Language Models"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">5/2</th>
+                                    <td>Secure multi-party computation and private ad attribution.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://www.usenix.org/system/files/conference/nsdi17/nsdi17-corrigan-gibbs.pdf">Corrigan-Gibbs
+                                                    and Boneh. "Prio: Private, Robust, and Scalable Computation of
+                                                    Aggregate Statistics"</a>.
+                                            <li> <b>Read:</b> <a
+                                                    href="https://docs.google.com/document/d/1KpdSKD8-Rn0bWPTu4UtK54ks0yv2j22pA5SrAD9av4s/edit#heading=h.f4x9f0nqv28x">Taubeneck
+                                                    et al. "Interoperable Private Attribution"</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">5/4</th>
+                                    <td><a href="https://twitter.com/ChadBrubaker__">Chad Brubaker</a>: Privacy design
+                                        in the real world.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Read:</b> <a
+                                                    href="https://github.com/google/exposure-notifications-internals/blob/main/en-risks-and-mitigations-faq.md">Exposure
+                                                    Notification: Risks and Mitigations FAQ</a>.
+                                        </ul>
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">5/9</th>
+                                    <td>"Smart home" and IoT privacy.</td>
+                                    <td>
+                                        <ul class="list-unstyled mb-0">
+                                            <li> <b>Optional:</b> <a
+                                                    href="https://people.eecs.berkeley.edu/~daw/papers/listen-nspw19.pdf">Malkin
+                                                    et
+                                                    al. “Privacy Controls for Always-Listening Devices”</a>.
+                                        </ul>
+                                    </td>
+                                    <td class="text-center align-middle">
+                                        <a class="icon-link" href="notes/iot.pptx">
+                                            <svg class="bigicon" aria-hidden="true">
+                                                <use xlink:href="#slides"></use>
+                                            </svg>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+        </main>
+        <!-- <footer class="pt-5 my-5 text-body-secondary border-top">
+            Created by the Bootstrap team &middot; &copy; 2024
+        </footer> -->
+    </div>
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
