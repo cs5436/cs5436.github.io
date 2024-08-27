@@ -79,3 +79,64 @@
     height: 1.15em;
     width: 1.15em;
 }
+
+
+.abbr {
+  display: none;
+}
+
+.init {
+  display: none;
+}
+
+@media only screen and (max-width: 1160px) { 
+  .full {
+    display: none;
+  }
+  .abbr {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 991px) { 
+  .full {
+    display: block;
+  }
+  .abbr {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 775px) { 
+  .full {
+    display: none;
+  }
+  .abbr {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 610px) { 
+  .abbr {
+    display: none;
+  }
+  .full {
+    display: none;
+  }
+  .init {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 575px) { 
+  .full {
+    display: block;
+  }
+  .abbr {
+    display: none;
+  }
+  .init {
+    display: none;
+  }
+}
